@@ -2,15 +2,24 @@ body {
   margin: 0;
   height: 100vh;
   color: #000;
+  text-align: center;
+}
+
+main,
+header,
+.candy,
+.nom,
+.yum,
+.diabeetus {
+  padding-top: 1rem;
 }
 
 .grid-container {
   display: grid;
-  grid-template-columns: 1fr 1.5fr 2fr;
-  grid-template-rows: 1fr 4fr 3fr 2fr;
-  grid-template-areas: "main   main    header" "main   main    candy" "nom    yum     candy" "footer footer  candy";
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 4fr 3fr 2fr 2fr 1fr;
+  grid-template-areas: "header" "main" "candy" "nom" "yum" "footer";
   height: 100vh;
-  margin: 2rem;
 }
 
 main {
@@ -44,14 +53,11 @@ header {
   background-color: #ffebee;
 }
 
-@media screen and (min-width: 420px) {
+@media screen and (min-width: 768px) {
   .grid-container {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: "header" "main" "nom" "yum" "footer";
-  }
-  .candy {
-    display: none;
+    grid-template-columns: 1fr 1.5fr 2fr;
+    grid-template-rows: 1fr 4fr 3fr 2fr;
+    grid-template-areas: "main   main    header" "main   main    candy" "nom    yum     candy" "footer footer  candy";
   }
 }
 /*# sourceMappingURL=main.css.map */
